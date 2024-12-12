@@ -1,0 +1,123 @@
+/*
+    Student Name: Bruce Schulz
+    Date: 12.03.24
+    File Name: styles.css
+*/
+
+.hero{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)) ,url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.welcome{
+    position: absolute;
+    top: 40%;
+}
+
+.display-1{
+    font-size: 4em;
+}
+
+.bg-orange{
+    background-color: orangered;
+}
+
+figure{
+    outline: 4px solid orangered;
+}
+
+figcaption {
+    padding: 2%;
+    border-top: 4px dashed orangered;
+    text-align: center;
+}
+
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px orangered;
+}
+
+.book_box{
+    align-content: center;
+    align-self: center;
+}
+
+.books{
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media Query for Tablet Viewport */
+@media (min-width: 768px) { 
+    
+    .welcome {
+        top: 20%;
+        left: 5%;
+        padding: 2em;
+    }
+
+    /*Style rule for grid class*/
+    .grid {
+        display: grid;
+        grid-template-columns: 2;
+        gap: 10px;
+    }
+
+    aside {
+        grid-column: 1 / span 2;
+    }
+
+}
+
+/* Media Query for Desktop Viewport */
+@media (min-width: 992px) { 
+    
+    .hero {
+        background-position: left;
+    }
+    
+    .display-1 {
+        font-size: 8em;
+    }
+
+    /*Style rules for Grid Class Selector*/
+    .grid {
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+    }
+
+    aside {
+        grid-column: 1 / span 3;
+        font-size: 2em;
+    }
+}
+
+/*Media Query for Large Desktop Viewports*/
+@media screen and (min-width: 1921px),
+print {
+
+    /*Styel ruls for grid class selector*/
+    .grid {
+        grid-template-columns: 4;
+    }
+
+    aside {
+        grid-column: 1 / span 4;
+        font-size: 3em;
+    }
+
+}
+
+/*Media Query for Print*/
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
